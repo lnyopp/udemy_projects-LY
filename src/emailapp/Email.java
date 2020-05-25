@@ -52,23 +52,29 @@ public class Email {
 		switch (depChoice) {
 
 		case (1): {
+			in.close();
 			return "sales";
 		}
 
 		case (2): {
+			in.close();
 			return "developer";
 		}
 
 		case (3): {
+			in.close();
 			return "accounting";
 		}
 
 		default:
+			in.close();
 			return "";
 		}
 
+		
 	}
 
+	
 	// Generate Random password
 	private String randomPassword(int length) {
 		
@@ -119,10 +125,11 @@ public class Email {
 	
 	
 	public String showInfo() {
+
 		
 		return "DISPLAY NAME: " + firstName + " " + lastName + 
 				"\nCOMPANY EMAIL: " + email + 
 				"\nMAILBOX CAPACITY " + mailboxCapacity + "mb";
 	}
-
+	
 }
