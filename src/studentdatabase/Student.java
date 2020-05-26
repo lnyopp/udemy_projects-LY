@@ -29,7 +29,7 @@ public class Student {
 		
 		setStudentid();
 //		System.out.println(firstName + " " + lastName + " " + gradeYear +  " " + studentId);
-		
+		in.close();
 		
 	}
 	//generate an ID
@@ -46,22 +46,28 @@ public class Student {
 	
 	public void enroll() {
 		
+		Scanner in = new Scanner (System.in);
+		
 		do {
 		System.out.println("Enter Course to Enroll (Q to quit) : ");
-		Scanner in = new Scanner (System.in);
+		
 		String course = in.nextLine();
 		if(!course.equalsIgnoreCase("Q")){
 			courses = courses +"\n" + course;
 			tuitionBalance = tuitionBalance + costOfCourse;
 			
-		}else {
+		}
+		else {
+			
 			break;
 		}
 		
 		}while(1 != 0);
 		
+		
 //		System.out.println("Enrolled In: " + courses);
 		viewBalance();
+		
 		
 		
 	
